@@ -1,3 +1,26 @@
-build/
-node_modules/
-coverage/
+# IDE #
+.idea/
+*.swp
+!/typings/custom.d.ts
+.vscode/
+
+# OS generated files #
+.DS_Store
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# Node Files #
+node_modules
+
+# Build Artifacts #
+release
+dist
+/node_modules/
+lerna-debug.log
+/lib/
+ngfactory
+output
+*.ngsummary.json
+*.ngfactory.ts
+tmp
