@@ -1,7 +1,7 @@
 import React from 'react';
 import expect from 'expect';
 import { mount } from 'enzyme';
-import { jsdom } from 'jsdom';
+import { JSDOM } from 'jsdom';
 import { Dropdown, DropdownItem } from '../index';
 import { Button } from '../index';
 
@@ -40,7 +40,7 @@ describe('Dropdown', () => {
   });
 
   describe('dropdown changehandler', function() {
-    const document = jsdom('');
+    const {document} = new JSDOM('').window;
     Object.keys(document.defaultView).forEach((property) => {
       if (typeof global[property] === 'undefined') {
         global[property] = document.defaultView[property];
@@ -72,7 +72,7 @@ describe('Dropdown', () => {
   });
 
   describe('dropdown handleKeyDown', function() {
-    const document = jsdom('');
+      const {document} = new JSDOM('').window;
     Object.keys(document.defaultView).forEach((property) => {
       if (typeof global[property] === 'undefined') {
         global[property] = document.defaultView[property];

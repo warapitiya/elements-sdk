@@ -1,13 +1,13 @@
 import React from 'react';
 import expect from 'expect';
 import { shallow, mount } from 'enzyme';
-import { jsdom } from 'jsdom';
+import { JSDOM } from 'jsdom';
 import { Calendar } from '../index';
 
 describe('Calendar', () => {
 
   describe('Calendar', function () {
-    const document = jsdom('');
+      const {document} = new JSDOM('').window;
 
     Object.keys(document.defaultView).forEach((property) => {
       if (typeof global[property] === 'undefined') {

@@ -1,7 +1,9 @@
 import React from 'react';
-import expect from 'expect';
+import chai from 'chai';
 import {shallow} from 'enzyme';
 import {Button} from '../index';
+
+const expect = chai.expect;
 
 describe('Button', () => {
     let wrapper;
@@ -12,11 +14,11 @@ describe('Button', () => {
         });
 
         it('should render the Button as button element', function () {
-            expect(wrapper.node.type).toEqual('button');
+            expect(wrapper.node.type).to.equal('button');
         });
 
         it('should have the correct default className', function () {
-            expect(wrapper.hasClass('pe-btn')).toExist();
+            expect(wrapper.hasClass('pe-btn')).to.be.true;
         });
     });
 
@@ -26,15 +28,15 @@ describe('Button', () => {
         });
 
         it('should render the Button as button element', function () {
-            expect(wrapper.node.type).toEqual('button');
+            expect(wrapper.node.type).to.be.equal('button');
         });
 
         it('should have the correct classNames', function () {
-            expect(wrapper.hasClass('pe-btn-primary')).toExist();
+            expect(wrapper.hasClass('pe-btn-primary')).to.be.true;
         });
 
         it('should render text correctly', function () {
-            expect(wrapper.text()).toEqual('Test Button');
+            expect(wrapper.text()).to.be.equal('Test Button');
         })
     });
 
@@ -44,19 +46,19 @@ describe('Button', () => {
         });
 
         it('should render the Button as button element', function () {
-            expect(wrapper.node.type).toEqual('button');
+            expect(wrapper.node.type).to.be.equal('button');
         });
 
         it('should have the correct classNames', function () {
-            expect(wrapper.hasClass('pe-btn')).toExist();
+            expect(wrapper.hasClass('pe-btn')).to.be.true;
         });
 
         it('should render text correctly', function () {
-            expect(wrapper.text()).toEqual('Disabled Button');
+            expect(wrapper.text()).to.be.equal('Disabled Button');
         });
 
         it('should have the disabled attribute', function () {
-            expect(wrapper.prop('disabled')).toExist();
+            expect(wrapper.prop('disabled')).to.be.true;
         })
     });
 
@@ -66,19 +68,19 @@ describe('Button', () => {
         });
 
         it('should render the Button as button element', function () {
-            expect(wrapper.node.type).toEqual('button');
+            expect(wrapper.node.type).to.be.equal('button');
         });
 
         it('should have the correct classNames', function () {
-            expect(wrapper.hasClass('pe-btn-primary')).toExist();
+            expect(wrapper.hasClass('pe-btn-primary')).to.be.true;
         });
 
         it('should render text correctly', function () {
-            expect(wrapper.text()).toEqual('Disabled Primary Button');
+            expect(wrapper.text()).to.be.equal('Disabled Primary Button');
         });
 
         it('should have the disabled attribute', function () {
-            expect(wrapper.prop('disabled')).toExist();
+            expect(wrapper.prop('disabled')).to.be.true;
         })
     });
 
@@ -88,16 +90,16 @@ describe('Button', () => {
         });
 
         it('should render the Button as button element', function () {
-            expect(wrapper.node.type).toEqual('button');
+            expect(wrapper.node.type).to.be.equal('button');
         });
 
         it('should have the correct classNames', function () {
-            expect(wrapper.hasClass('pe-btn')).toExist();
-            expect(wrapper.hasClass('pe-btn-lg')).toExist();
+            expect(wrapper.hasClass('pe-btn')).to.be.true;
+            expect(wrapper.hasClass('pe-btn-lg')).to.be.true;
         });
 
         it('should render text correctly', function () {
-            expect(wrapper.text()).toEqual('Large Button');
+            expect(wrapper.text()).to.be.equal('Large Button');
         });
     });
 
@@ -107,16 +109,16 @@ describe('Button', () => {
         });
 
         it('should render the Button as button element', function () {
-            expect(wrapper.node.type).toEqual('button');
+            expect(wrapper.node.type).to.be.equal('button');
         });
 
         it('should have the correct classNames', function () {
-            expect(wrapper.hasClass('pe-btn')).toExist();
-            expect(wrapper.hasClass('pe-btn-xl')).toExist();
+            expect(wrapper.hasClass('pe-btn')).to.be.true;
+            expect(wrapper.hasClass('pe-btn-xl')).to.be.true;
         });
 
         it('should render text correctly', function () {
-            expect(wrapper.text()).toEqual('xLarge Button');
+            expect(wrapper.text()).to.be.equal('xLarge Button');
         });
     });
 
