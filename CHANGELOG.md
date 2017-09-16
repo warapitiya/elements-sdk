@@ -12,6 +12,7 @@
 ### Features
 
 * **buttons:** Standardized rule for button class names ([69d19fd](https://github.com/Pearson-Higher-Ed/ElementsSDK/commit/69d19fd))
+* **dependency:** Update dependency for the repo ([b4094e0](https://github.com/Pearson-Higher-Ed/ElementsSDK/commit/b4094e0))
 
 
 ### BREAKING CHANGES
